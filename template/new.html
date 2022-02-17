@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    {% for d in data %}
+    <div class="card" style="width: 18rem;">
+        <img src="http://127.0.0.1:8000/media/{{d.pic}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{d.name}}</h5>
+          <p class="card-text">{{d.song}}</p>
+          <a href="result/?name={{d.name}}" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    {% endfor %}
+{% endblock %}
